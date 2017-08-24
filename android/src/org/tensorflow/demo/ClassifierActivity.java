@@ -31,13 +31,14 @@ import android.os.Trace;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
-import java.util.List;
-import java.util.Vector;
+
 import org.tensorflow.demo.OverlayView.DrawCallback;
 import org.tensorflow.demo.env.BorderedText;
 import org.tensorflow.demo.env.ImageUtils;
 import org.tensorflow.demo.env.Logger;
-import org.tensorflow.demo.R;
+
+import java.util.List;
+import java.util.Vector;
 
 public class ClassifierActivity extends CameraActivity implements OnImageAvailableListener {
   private static final Logger LOGGER = new Logger();
@@ -64,7 +65,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   private static final String INPUT_NAME = "Mul:0";
   private static final String OUTPUT_NAME = "final_result";
 
-  private static final String MODEL_FILE = "file:///android_asset/rounded_graph.pb";
+  private static final String MODEL_FILE = "file:///android_asset/retrained_graph.pb";
   private static final String LABEL_FILE = "file:///android_asset/retrained_labels.txt";
 
   private static final boolean SAVE_PREVIEW_BITMAP = false;
