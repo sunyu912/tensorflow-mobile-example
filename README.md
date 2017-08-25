@@ -19,11 +19,7 @@
 
 5. Run Docker environment:
 
-`docker run -it \
-  --publish 6006:6006 \
-  --volume ${HOME}/tensorflow-mobile-example:/tensorflow-mobile-example \
-  --workdir /tensorflow-mobile-example \
-  tensorflow/tensorflow:1.1.0 bash`
+`docker run -it  --publish 6006:6006  --volume ${HOME}/tensorflow-mobile-example:/tensorflow-mobile-example  --workdir /tensorflow-mobile-example  tensorflow/tensorflow:1.1.0 bash`
   
 6. Verify the tool and model prediction works:
 
@@ -34,11 +30,7 @@
   
 7. Optimze the model for mobile:
 
-`python -m tensorflow.python.tools.optimize_for_inference \
-  --input=tf_files/retrained_graph.pb \
-  --output=tf_files/optimized_graph.pb \
-  --input_names="Cast" \
-  --output_names="final_result"`
+`python -m tensorflow.python.tools.optimize_for_inference --input=tf_files/retrained_graph.pb --output=tf_files/optimized_graph.pb --input_names="Cast" --output_names="final_result"`
   
 8. Copy the optimized models to mobile Android projecT:
 
